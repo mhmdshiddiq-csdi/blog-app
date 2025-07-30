@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
+import { Button } from '../../ui/button'
+import SearchInput from './search-input'
+import ToggleMode from './toggle-mode'
 
 const Navbar = () => {
   return (
@@ -29,6 +32,16 @@ const Navbar = () => {
             <Link href={'/dashboard'} className='text-sm font-medium text-foreground transition-colors hover:text-foreground'>
               Dashboard
             </Link>
+          </div>
+          {/* Right Section */}
+          <div className='flex items-center gap-4'>
+            <SearchInput />
+            <ToggleMode />
+            <div className='hidden md:flex items-center gap-2'>
+              <Button>Login</Button>
+              <Button>Signup</Button>
+
+            </div>
           </div>
         </div>
 
